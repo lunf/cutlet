@@ -13,5 +13,5 @@ import lombok.NonNull;
  * @author rmuehlba
  */
 public interface OptimizationStrategy {
-    public OptimizationResult optimize(@NonNull Project project, @NonNull FitnessFunction fitness) throws OptimizationFailedException;
+    OptimizationResult optimize(@NonNull Project project, @NonNull FitnessFunction fitness) throws OptimizationFailedException;
 }

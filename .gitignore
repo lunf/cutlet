@@ -13,3 +13,14 @@ hs_err_pid*
 /CutletGui/target/
 /CutletLib/nbproject/
 /CutletBenchmark/nbproject/
+
+#IntelliJ IDEA
+.idea/
+.idea/*
+
+*.iml
+/CutletGui/CutletGui.iml
+/CutletLib/nbproject/
+/CutletBenchmark/nbproject/
+CutletBenchmark/target
+CutletLib/target

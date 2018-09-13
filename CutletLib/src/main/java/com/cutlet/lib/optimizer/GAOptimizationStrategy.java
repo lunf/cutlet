@@ -9,13 +9,13 @@ import com.cutlet.lib.data.cuttree.FreeNode;
 import java.util.List;
 import java.util.logging.Logger;
 import lombok.NonNull;
-import org.jenetics.EnumGene;
-import org.jenetics.Optimize;
-import org.jenetics.engine.Codec;
-import org.jenetics.engine.Engine;
-import org.jenetics.engine.EvolutionResult;
-import org.jenetics.engine.codecs;
-import org.jenetics.util.ISeq;
+import io.jenetics.EnumGene;
+import io.jenetics.Optimize;
+import io.jenetics.engine.Codec;
+import io.jenetics.engine.Engine;
+import io.jenetics.engine.EvolutionResult;
+import io.jenetics.engine.Codecs;
+import io.jenetics.util.ISeq;
 
 /**
  *
@@ -30,8 +30,9 @@ public class GAOptimizationStrategy extends AbstractOptimizationStrategy {
     public OptimizationResult optimize(@NonNull final Project project, 
             @NonNull final FitnessFunction fitness) {
 
+
         final ISeq<PanelInstance> panels = ISeq.of(project.getPanelInstances());
-        final Codec<ISeq<PanelInstance>, EnumGene<PanelInstance>> codec = codecs.ofPermutation(panels);
+        final Codec<ISeq<PanelInstance>, EnumGene<PanelInstance>> codec = Codecs.ofPermutation(panels);
 
         final Engine<EnumGene<PanelInstance>, Double> engine
                 = Engine.builder((seq) -> fitness.fitness(optimizeAux(project, seq.asList()).getStats()), codec)

@@ -63,8 +63,8 @@
                                             <columns>
                                                 <TableColumn fx:id="panelTableName" prefWidth="75.0" text="%table.panel.name" />
                                                 <TableColumn fx:id="panelTableCount" prefWidth="75.0" text="%table.panel.count" />
-                                    <TableColumn fx:id="panelTableLength" prefWidth="75.0" style="-fx-text-alignment: right;" text="%table.panel.length" />
-                                    <TableColumn fx:id="panelTableWidth" prefWidth="75.0" text="%table.panel.width" />
+                                                <TableColumn fx:id="panelTableLength" prefWidth="75.0" style="-fx-text-alignment: right;" text="%table.panel.length" />
+                                                <TableColumn fx:id="panelTableWidth" prefWidth="75.0" text="%table.panel.width" />
                                             </columns>
                                         </TableView>
                                     </content>

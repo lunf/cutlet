@@ -33,7 +33,7 @@ public class Cutlet extends Application {
             MainSceneController controller = (MainSceneController) loader.getController();
             controller.setStage(primaryStage);
 
-            final Scene scene = new Scene(root, 300, 275);
+            final Scene scene = new Scene(root, 800, 600);
             scene.getStylesheets().add("/styles/Styles.css");
 
             primaryStage.setTitle(i18n("application.title"));
@@ -81,7 +81,7 @@ public class Cutlet extends Application {
     }
 
     private static ResourceBundle getBundle() {
-        return ResourceBundle.getBundle("Bundle", Locale.GERMANY);
+        return ResourceBundle.getBundle("Bundle", Locale.US);
     }
 
 }
