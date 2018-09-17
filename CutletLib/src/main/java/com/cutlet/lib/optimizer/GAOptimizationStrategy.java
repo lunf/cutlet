@@ -43,7 +43,7 @@ public class GAOptimizationStrategy extends AbstractOptimizationStrategy {
         //     collect the result.
         ISeq<PanelInstance> result = codec.decode(
                 engine.stream()
-                        .limit(100)
+                        .limit(1024)
                         .collect(EvolutionResult.toBestGenotype()));
 
         return optimizeAux(project, result.asList());
